@@ -87,9 +87,6 @@ video {
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-.overflow-hidden {
-  overflow: hidden;
-}
 .border-cyber-blue {
   --tw-border-opacity: 1;
   border-color: rgb(0 240 255 / var(--tw-border-opacity, 1));
@@ -134,25 +131,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(0 240 255 / var(--tw-bg-opacity, 1));
 }
-.bg-cyber-blue\/10 {
-  background-color: #00f0ff1a;
-}
-.bg-cyber-gray\/20 {
-  background-color: #1a1a2e33;
-}
-.bg-cyber-gray\/40 {
-  background-color: #1a1a2e66;
-}
 .bg-cyber-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(188 19 254 / var(--tw-bg-opacity, 1));
-}
-.bg-transparent {
-  background-color: transparent;
-}
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 .bg-white\/5 {
   background-color: #ffffff0d;
@@ -429,9 +410,6 @@ body {
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-gold-gradient {
-  background-image: linear-gradient(135deg, #d4af37, #f0deaa, #d4af37);
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));

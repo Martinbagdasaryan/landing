@@ -1,7 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { cn } from "../../utils/helper";
+import { useDispatch } from "react-redux";
+import { setIsOpenContactPopup } from "../../redux/selects/settings";
 
 const Header = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -53,7 +56,12 @@ const Header = () => {
           {/* <button className="hover:text-cyber-purple transition-colors">
             VIP
           </button> */}
-          <button className="px-6 py-2 border border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-black transition-all duration-300 uppercase text-xs tracking-widest font-bold clip-path-slant">
+          <button
+            onClick={() => {
+              dispatch(setIsOpenContactPopup(true));
+            }}
+            className="px-6 py-2 border border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-black transition-all duration-300 uppercase text-xs tracking-widest font-bold clip-path-slant"
+          >
             Contact us
           </button>
         </div>

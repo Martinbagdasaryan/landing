@@ -1,3 +1,4 @@
+
 import Future from "../../components/Future";
 import GameInAboutUs from "../../components/GameInAboutUs";
 import Info from "../../components/Info";
