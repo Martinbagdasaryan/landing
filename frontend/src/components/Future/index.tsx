@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { setIsOpenContactPopup } from "../../redux/selects/settings";
+import { useDispatch } from "react-redux";
 
 const Future = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <section className="relative min-h-full flex items-center justify-center px-4 pt-20 pb-10 overflow-hidden">
@@ -71,6 +74,9 @@ const Future = () => {
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </button>
           <button
+            onClick={() => {
+              dispatch(setIsOpenContactPopup(true));
+            }}
             className="group px-8 py-4 bg-transparent border border-cyber-purple text-cyber-purple font-bold text-lg tracking-wider uppercase hover:bg-cyber-purple/10 transition-colors"
             style={{
               clipPath: `polygon(

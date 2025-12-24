@@ -5,7 +5,6 @@ const Info = () => {
     >
       <div
         className="container mx-auto relative z-10 max-w-7xl"
-        data-id="element-16"
       >
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"

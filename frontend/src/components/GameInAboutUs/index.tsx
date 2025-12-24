@@ -29,12 +29,9 @@ const GameInAboutUs = () => {
       <div className="max-w-7xl mx-auto" data-id="element-33">
         <div
           className="flex items-center justify-between mb-12"
-          data-id="element-34"
-          style={{ opacity: 1, transform: "none" }}
         >
           <h2
-            className="text-4xl font-bold text-white tracking-wider"
-            data-id="element-35"
+            className="text-4xl font-bold text-white tracking-wider max-sm:text-[28px]"
           >
             TRENDING
             <span className="text-cyber-pink" data-id="element-36">
@@ -43,12 +40,10 @@ const GameInAboutUs = () => {
           </h2>
           <div
             className="h-px flex-1 bg-gradient-to-r from-cyber-pink/50 to-transparent ml-8"
-            data-id="element-37"
           ></div>
         </div>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          data-id="element-38"
         >
           {fovoritGame.map((game, index) => (
             <GamesCard

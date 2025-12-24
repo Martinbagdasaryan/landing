@@ -5,64 +5,75 @@ const fovoritGame = [
     gameName: "Neon Roulette",
     gameTamlet:
       "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Cyber Slots",
     gameTamlet:
       "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Virtual Poker",
     gameTamlet:
       "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Jackpot Arena",
     gameTamlet:
       "https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Neon Roulette",
     gameTamlet:
       "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Cyber Slots",
     gameTamlet:
       "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Virtual Poker",
     gameTamlet:
       "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Jackpot Arena",
     gameTamlet:
       "https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Neon Roulette",
     gameTamlet:
       "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Cyber Slots",
     gameTamlet:
       "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Virtual Poker",
     gameTamlet:
       "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
   {
     gameName: "Jackpot Arena",
     gameTamlet:
       "https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
+    gamesURL: "https://aviadream.org/",
   },
 ];
-
 
 const Games = () => {
   return (
@@ -78,7 +89,7 @@ const Games = () => {
               className="text-4xl font-bold text-white tracking-wider"
               data-id="element-35"
             >
-              ALL {' '}
+              ALL{" "}
               <span className="text-cyber-pink" data-id="element-36">
                 GAMES
               </span>
@@ -97,7 +108,8 @@ const Games = () => {
                 gameName={game.gameName}
                 gameTamlet={game.gameTamlet}
                 index={index}
-                height={'h-72'}
+                gamesURL={game.gamesURL}
+                height={"h-72"}
               />
             ))}
           </div>
