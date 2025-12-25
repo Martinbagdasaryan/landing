@@ -1,79 +1,5 @@
 import GamesCard from "../../components/GamesCard";
-
-const fovoritGame = [
-  {
-    gameName: "Neon Roulette",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Cyber Slots",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Virtual Poker",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Jackpot Arena",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Neon Roulette",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Cyber Slots",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Virtual Poker",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Jackpot Arena",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Neon Roulette",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1605870445919-838d190e8e1b?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Cyber Slots",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Virtual Poker",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-  {
-    gameName: "Jackpot Arena",
-    gameTamlet:
-      "https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?auto=format&amp;fit=crop&amp;q=80&amp;w=800",
-    gamesURL: "https://aviadream.org/",
-  },
-];
+import { fovoritGame } from "../../utils/helper";
 
 const Games = () => {
   return (
@@ -105,10 +31,11 @@ const Games = () => {
           >
             {fovoritGame.map((game, index) => (
               <GamesCard
+                key={index}
                 gameName={game.gameName}
                 gameTamlet={game.gameTamlet}
                 index={index}
-                gamesURL={game.gamesURL}
+                getWayURL={game.gamesURL}
                 height={"h-72"}
               />
             ))}

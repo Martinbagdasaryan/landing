@@ -57,8 +57,9 @@ const Popup = () => {
           </div>
 
           <div className="space-y-4">
-            {contact.map((item) => (
+            {contact.map((item, index) => (
               <a
+                key={index}
                 href={item.sendTo}
                 target="_blank"
                 rel="noopener noreferrer"

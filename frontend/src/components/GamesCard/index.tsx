@@ -1,3 +1,4 @@
+import axios from "axios";
 import { cn } from "../../utils/helper";
 
 interface IGamesCard {
@@ -5,7 +6,7 @@ interface IGamesCard {
   gameTamlet: string;
   index?: number;
   height?: string;
-  gamesURL: string;
+  getWayURL: string;
 }
 
 const colors = [
@@ -26,10 +27,18 @@ const GamesCard = ({
   gameTamlet,
   index = 0,
   height,
-  gamesURL,
+  getWayURL,
 }: IGamesCard) => {
   const border = colors[index % 4];
   const bg = bgColor[index % 4];
+
+  const getGameUrl = async (getWayURL: string) => {
+    const gameUrl: { data: string } = await axios.post(getWayURL);
+    if (gameUrl.data) {
+      window.open(gameUrl.data, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -50,7 +59,7 @@ const GamesCard = ({
         <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20"></div>
       </div>
       <div
-        className="absolute bottom-3 left-0 w-full p-6 z-20"
+        className="absolute bottom-9 left-0 w-full px-6 z-20"
         data-id="element-44"
       >
         <h3
@@ -73,15 +82,14 @@ const GamesCard = ({
         )}
         data-id="element-46"
       >
-        <a
-          href={gamesURL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          onClick={() => {
+            getGameUrl(getWayURL);
+          }}
           className={cn(
             "relative w-[calc(100%_-_40px)] overflow-hidden rounded-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 tracking-wide uppercase text-sm text-obsidian-900 shadow-[0_0_15px_rgba(212,175,55,0.3)] px-4 py-2 flex-1",
             bg,
           )}
-          tabIndex={0}
         >
           <div
             className="absolute inset-0 bg-white/20"
@@ -98,9 +106,9 @@ const GamesCard = ({
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-play w-4 h-4 mr-2"
               aria-hidden="true"
               data-id="element-48"
@@ -109,7 +117,7 @@ const GamesCard = ({
             </svg>
             Demo
           </span>
-        </a>
+        </div>
 
         <button
           className="relative overflow-hidden rounded-sm font-bold py-2 w-12 text-black border-l border-black"
@@ -126,9 +134,9 @@ const GamesCard = ({
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide lucide-info w-4 h-4"
               aria-hidden="true"
               data-id="element-50"
