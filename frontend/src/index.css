@@ -131,6 +131,11 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(0 240 255 / var(--tw-bg-opacity, 1));
 }
+
+.fill-cyber-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 240 255 / var(--tw-bg-opacity, 1));
+}
 .bg-cyber-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(188 19 254 / var(--tw-bg-opacity, 1));

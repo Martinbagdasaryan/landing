@@ -43,8 +43,8 @@ const Popup = () => {
             <div>
               <h2 className="text-xl font-semibold text-white">Contact us</h2>
               <p className="mt-1 text-sm text-zinc-400">
-                We'll be happy to answer any questions regarding our processes
-                and products
+                You can contact us through the following channels <br /> we are
+                available 24/7.
               </p>
             </div>
 

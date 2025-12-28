@@ -1,14 +1,13 @@
-import { fovoritGame } from "../../utils/helper";
+import { fovoritGame } from "../../utils/data";
 import GamesCard from "../GamesCard";
 
 const GameInAboutUs = () => {
-
   return (
     <section className="py-20 px-4 relative z-10" data-id="element-32">
       <div className="max-w-7xl mx-auto" data-id="element-33">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl font-bold text-white tracking-wider max-sm:text-[28px]">
-            TRENDING
+            TRENDING{" "}
             <span className="text-cyber-pink" data-id="element-36">
               GAMES
             </span>
@@ -19,10 +18,8 @@ const GameInAboutUs = () => {
           {fovoritGame.slice(0, 4).map((game, index) => (
             <GamesCard
               key={index}
-              gameName={game.gameName}
-              gameTamlet={game.gameTamlet}
+              game={game}
               index={index}
-              getWayURL={game.gamesURL}
             />
           ))}
         </div>

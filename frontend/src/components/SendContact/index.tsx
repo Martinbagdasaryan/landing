@@ -3,10 +3,10 @@ import { setIsOpenContactPopup } from "../../redux/selects/settings";
 
 const SendContact = () => {
   const dispatch = useDispatch();
-  
+
   return (
     <section
-      className="py-20 text-center relative overflow-hidden"
+      className="py-20 text-center relative overflow-hidden z-0"
       data-id="element-19"
     >
       <div
@@ -21,17 +21,16 @@ const SendContact = () => {
           className="text-4xl md:text-6xl font-bold mb-8"
           data-id="element-22"
         >
-          READY TO{" "}
+          BECOME OUR PARTNER {' '}
           <span className="text-cyber-pink" data-id="element-23">
-            ASCEND?
+            NOW
           </span>
         </h2>
         <p
           className="text-gray-400 mb-10 max-w-2xl mx-auto text-lg"
           data-id="element-24"
         >
-          Join the elite circle of winners in the metaverse's premier gaming
-          destination.
+          Click ‘Get in Touch’ and take your first step toward partnership.
         </p>
         <button
           onClick={() => dispatch(setIsOpenContactPopup(true))}

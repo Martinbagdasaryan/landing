@@ -22,13 +22,20 @@ const Header = () => {
           className="cursor-pointer flex items-center gap-2"
           data-id="element-6"
         >
-          <div className="w-8 h-8 bg-cyber-blue rounded-sm rotate-45 flex items-center justify-center shadow-neon-blue">
-            <span className="text-cyber-black font-bold -rotate-45">C</span>
-          </div>
+          <svg width="36" height="36" viewBox="0 0 90 90">
+            <path
+              fill={"#fff"}
+              d="M45 0a45 45 0 1 1-.1 0Z"
+            />
+            <path
+              fill="#000"
+              d="M15 20c8 3 12 22 0 50 7-6 31-2 45 0 18 3 7-17 15-20-5 0-15-4-15 0 0 6 8 3 8 6 0 4-4 9-9 6-6-4-10-13-9-17 8 0 2-10 9-18 1 9 4 12 8 15s1-3 6-2c-9-6-1-23-18-20-13 3-25-7-40 0m35 43c-9-3-15-3-20-2 5-6-1-6 0-11 3 3 12 1 13-2 1 5 1 11 7 15m-7-20c-3-6-9-3-13-3 6-5-3-12 6-12s8 2 12 0c-3 5-5 8-5 15"
+            />
+          </svg>
           <span className="text-2xl font-bold tracking-widest text-white">
-            CYBER
+            ELITE{" "}
             <span className="text-cyber-blue" data-id="element-10">
-              BET
+              GAMES
             </span>
           </span>
         </div>
