@@ -22,19 +22,24 @@ const Future = () => {
           className="text-6xl md:text-8xl font-bold mb-6 tracking-tight"
           style={{ opacity: "1", transform: "none" }}
         >
-          <span className="block text-white glitch-text" data-text="FUTURE OF">
-            FUTURE OF
+          <span
+            className="block text-white glitch-text"
+            data-text="ELEVATE YOUR"
+          >
+            ELEVATE YOUR
           </span>
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-white to-cyber-purple drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">
-            DIGITAL CASINO
+            GAMING BUSINESS
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
-          Experience the thrill of decentralized gaming with{" "}
-          <span className="text-cyber-pink font-semibold">zero latency</span>{" "}
-          and{" "}
-          <span className="text-cyber-blue font-semibold">provably fair</span>{" "}
-          algorithms. Welcome to the neon frontier.
+          We deliver innovative, game-driven solutions {" "}
+          <span className="text-cyber-pink font-semibold">
+            powered by advanced
+          </span>{" "}
+           technology. Integrate our games{" "}
+          <span className="text-cyber-blue font-semibold">and deliver</span> a
+          high-quality gaming experience.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <button

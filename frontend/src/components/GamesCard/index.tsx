@@ -1,12 +1,12 @@
 import axios from "axios";
-import { cn } from "../../utils/helper";
+import { setOpenInfoGamePopup } from "../../redux/selects/settings";
+import { useDispatch } from "react-redux";
+import { cn, type IfovoritGame } from "../../utils/helper";
 
 interface IGamesCard {
-  gameName: string;
-  gameTamlet: string;
+  game: IfovoritGame;
   index?: number;
   height?: string;
-  getWayURL: string;
 }
 
 const colors = [
@@ -22,15 +22,11 @@ const bgColor = [
   "bg-cyber-blue",
 ];
 
-const GamesCard = ({
-  gameName,
-  gameTamlet,
-  index = 0,
-  height,
-  getWayURL,
-}: IGamesCard) => {
+const GamesCard = ({ game, index = 0, height}: IGamesCard) => {
+  const { gamesURL, gameTamlet, gameName } = game;
   const border = colors[index % 4];
   const bg = bgColor[index % 4];
+  const dispatch = useDispatch();
 
   const getGameUrl = async (getWayURL: string) => {
     const gameUrl: { data: string } = await axios.post(getWayURL);
@@ -84,7 +80,7 @@ const GamesCard = ({
       >
         <div
           onClick={() => {
-            getGameUrl(getWayURL);
+            getGameUrl(gamesURL);
           }}
           className={cn(
             "relative w-[calc(100%_-_40px)] overflow-hidden rounded-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 tracking-wide uppercase text-sm text-obsidian-900 shadow-[0_0_15px_rgba(212,175,55,0.3)] px-4 py-2 flex-1",
@@ -120,6 +116,9 @@ const GamesCard = ({
         </div>
 
         <button
+          onClick={() => {
+            dispatch(setOpenInfoGamePopup(game));
+          }}
           className="relative overflow-hidden rounded-sm font-bold py-2 w-12 text-black border-l border-black"
           data-id="element-108"
         >
