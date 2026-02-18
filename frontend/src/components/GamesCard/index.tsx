@@ -22,11 +22,7 @@ const GamesCard = ({ game, index = 0, height }: IGamesCard) => {
 		const gameUrl: { data: string } = await axios.post(getWayURL);
 		if (gameUrl.data) {
 			// window.open(gameUrl.data, '_blank', 'noopener');
-			const link = document.createElement('a');
-			link.href = gameUrl.data;
-			link.target = '_blank';
-			link.rel = 'noopener noreferrer';
-			link.click();
+			window.location.href = gameUrl.data;
 		}
 	};
 
